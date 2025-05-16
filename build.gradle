@@ -14,18 +14,10 @@ def githubActor = project.findProperty("github.actor") ?: System.getenv("GITHUB_
 def githubToken = project.findProperty("github.token") ?: System.getenv("GITHUB_TOKEN")
 def githubRepo = System.getenv("GITHUB_REPOSITORY")
 
-//debugging
-//    if (githubActor != null) {
-//      println "🔐 Configuring GitHub Packages publishing to: https://maven.pkg.github.com/$githubRepo"
-//    }
-//    println "GitHub Packages publishing required environment variables:"
-//    println " - GITHUB_ACTOR=${githubActor != null ? '✔' : '❌'}"
-//    println " - GITHUB_TOKEN=${githubToken != null ? '✔' : '❌'}"
-//    println " - GITHUB_REPOSITORY=${githubRepo != null ? '✔' : '❌'}"
 
 java {
-  sourceCompatibility = JavaVersion.VERSION_21
-  targetCompatibility = JavaVersion.VERSION_21
+  sourceCompatibility = JavaVersion.VERSION_17
+  targetCompatibility = JavaVersion.VERSION_17
 }
 
 sourceSets {
@@ -175,7 +167,6 @@ openApiGenerate {
           useSpringBoot3                : "true",
           implicitHeaders               : "false",
           performBeanValidation         : "true",
-          additionalModelTypeAnnotations: "@lombok.Builder;@lombok.AllArgsConstructor;@lombok.NoArgsConstructor",
           serializableModel             : "true",
           openApiNullable               : "false"
   ]
