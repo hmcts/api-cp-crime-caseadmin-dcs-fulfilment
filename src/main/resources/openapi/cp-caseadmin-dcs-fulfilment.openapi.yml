@@ -4,8 +4,8 @@ servers:
     url: https://virtserver.swaggerhub.com/HMCTS-DTS/api-cp-crime-caseadmin-dcs-fulfilment/0.0.0
 info:
   version: 0.0.0
-  title: HMCTS Common Platform case administration status tracking APIs
-  description: HMCTS Common Platform case administration status tracking APIs
+  title: Common Platform (CP) API Case Administration DCS status update callback
+  description: Common Platform (CP) API Case Administration callback endpoint to support tracking of court case requests sent by CP to DCS
   contact:
     email: no-reply@hmcts.com
   license:

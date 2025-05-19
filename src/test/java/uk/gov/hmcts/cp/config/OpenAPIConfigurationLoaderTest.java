@@ -21,8 +21,8 @@ class OpenAPIConfigurationLoaderTest {
 
         Info info = openAPI.getInfo();
         assertNotNull(info);
-        assertEquals("HMCTS Common Platform case administration status tracking APIs", info.getTitle());
-        assertEquals("HMCTS Common Platform case administration status tracking APIs", info.getDescription());
+        assertEquals("Common Platform (CP) API Case Administration DCS status update callback", info.getTitle());
+        assertEquals("Common Platform (CP) API Case Administration callback endpoint to support tracking of court case requests sent by CP to DCS", info.getDescription());
 
         String apiGitHubRepository = "api-cp-crime-caseadmin-dcs-fulfilment";
         String expectedVersion = System.getProperty("API_SPEC_VERSION", "0.0.0");
