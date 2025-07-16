@@ -55,7 +55,6 @@ components:
       required:
         - caseId
         - caseReferral
-        - defendants
     errorPayload:
       description: 'Payload representing the error state of the asynchronous API call'
       type: object
@@ -70,6 +69,9 @@ components:
             - "CASE_NOT_CREATED"
             - "DEFENDANT_NOT_CREATED"
             - "DEFENDANT_NOT_UPDATED"
+            - "CASE_HAS_SPLIT_OR_MERGED"
+            - "DOCUMENT_CONTAINS_VIRUS"
+            - "DOCUMENT_NOT_UPLOADED"
           description: "Error code for why the asynchronous API call failed"
         errorMessage:
           type: string
