@@ -1,7 +1,7 @@
 plugins {
   id 'java'
-  id 'org.openapi.generator' version '7.13.0'
-  id 'com.diffplug.spotless' version '7.0.3'
+  id 'org.openapi.generator' version '7.14.0'
+  id 'com.diffplug.spotless' version '7.2.1'
   id 'jacoco'
   id 'maven-publish'
   id "com.github.ben-manes.versions" version "0.52.0"
@@ -23,8 +23,9 @@ def formatterUrl = 'https://raw.githubusercontent.com/hmcts/api-cp-code-style/re
 def formatterPath = "${layout.buildDirectory.get().asFile.absolutePath}/eclipse-formatter.xml"
 
 java {
-  sourceCompatibility = JavaVersion.VERSION_17
-  targetCompatibility = JavaVersion.VERSION_17
+  def javaVersion = JavaVersion.toVersion(System.getProperty("java.version"))
+  sourceCompatibility = javaVersion
+  targetCompatibility = javaVersion
 }
 
 openApiGenerate {
