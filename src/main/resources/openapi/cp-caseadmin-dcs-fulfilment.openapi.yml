@@ -72,6 +72,7 @@ components:
             - "CASE_HAS_SPLIT_OR_MERGED"
             - "DOCUMENT_CONTAINS_VIRUS"
             - "DOCUMENT_NOT_UPLOADED"
+            - "CASE_DELETED"
           description: "Error code for why the asynchronous API call failed"
         errorMessage:
           type: string
