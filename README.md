@@ -1,4 +1,4 @@
-# API CP Crime CaseAdmin DCS Fulfilment
+# API CP Crime Case Admin DCS Fulfilment
 
 The Common Platform Case Admin API provides the capability to track the status of case administration requests sent to Digital Case System (DCS).
 
