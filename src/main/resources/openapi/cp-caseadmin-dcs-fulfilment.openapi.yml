@@ -1,7 +1,11 @@
 openapi: 3.0.0
 servers:
-  - description: APIHub API Auto Mocking CP case administration APIs for DCS transaction fulfilment
-    url: https://virtserver.swaggerhub.com/HMCTS-DTS/api-cp-crime-caseadmin-dcs-fulfilment/0.0.0
+  - description: HMCTS Common Platform case administration status tracking APIs
+    url: https://api-cp-crime-caseadmin-dcs-fulfilment.net/{version}
+    variables:
+      version:
+        default: "0.0.0"
+        description: API version; matches the spec info.version
 info:
   version: 0.0.0
   title: HMCTS Common Platform case administration status tracking APIs
